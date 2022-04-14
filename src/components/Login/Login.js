@@ -2,17 +2,17 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { CgCloseO } from "react-icons/cg";
 import { LoginMainContainer } from './StyledLogin';
-import logo from '../assets/logo.svg';
-import logotxt from '../assets/logo-txt.png';
-import Input from './Input/Input';
+import logo from '../../assets/logo.svg';
+import logotxt from '../../assets/logo-txt.png';
+import Input from '../Input/Input';
 
 const Login = () => {
     return (
         <LoginMainContainer>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col sm={12} md={6}>
-                        <div className="left-section">
+                        <div className="left-section ">
                             <div className="logo-section d-flex align-items-center">
                                 <span className='logo-img'><img src={logo} alt="logo" /> </span>
                                 <span className='logo-text-img'><img src={logotxt} alt="logo-text" /> </span>
@@ -25,10 +25,10 @@ const Login = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col sm={12} md={6}>
+                    <Col sm={12} md={6} className='right-section-main'>
                         <div className="right-section">
                          <div className="close-icon">
-                             <CgCloseO size='26px'  color='white'/>
+                             <CgCloseO size='26px'  className='close-icon'/>
                          </div>
                          <div className="login-section">
                              <label htmlFor="" className="label">Login</label>
