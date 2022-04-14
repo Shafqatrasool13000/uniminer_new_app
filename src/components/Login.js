@@ -1,0 +1,61 @@
+import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { CgCloseO } from "react-icons/cg";
+import { LoginMainContainer } from './StyledLogin';
+import logo from '../assets/logo.svg';
+import logotxt from '../assets/logo-txt.png';
+import Input from './Input/Input';
+
+const Login = () => {
+    return (
+        <LoginMainContainer>
+            <Container>
+                <Row>
+                    <Col sm={12} md={6}>
+                        <div className="left-section">
+                            <div className="logo-section d-flex align-items-center">
+                                <span className='logo-img'><img src={logo} alt="logo" /> </span>
+                                <span className='logo-text-img'><img src={logotxt} alt="logo-text" /> </span>
+                            </div>
+                            <div className="text-section">
+                                <p className="heading">Uniminer</p>
+                                <p className="sub-heading">
+                                made crypto mining simple
+                                </p>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col sm={12} md={6}>
+                        <div className="right-section">
+                         <div className="close-icon">
+                             <CgCloseO size='26px'  color='white'/>
+                         </div>
+                         <div className="login-section">
+                             <label htmlFor="" className="label">Login</label>
+                             <div className="mt-16">
+                             <Input type='email' placeholder='Email'/>
+                             </div>
+                             <div className="mt-16">
+                             <Input type='password' placeholder='Password'/>
+                             </div>
+                             <div className="d-flex     justify-content: stretch">
+                             <button className="login-btn w-100 ">
+                             Login
+                             </button>
+                             </div>
+                             <div className="register-text mt-16">
+                                 <span>Don't have an account?</span>
+                                 <span className='register'> Please register</span>
+
+                             </div>
+                         </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+        </LoginMainContainer>
+    )
+}
+
+export default Login

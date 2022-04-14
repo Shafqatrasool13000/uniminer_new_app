@@ -1,13 +1,36 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s;
+  outline:none;
+  border:none;
+}
+body{
+  background-color: var(--dark-color) !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-size: 16px;
+}
+@media screen and (max-width:991px) {
+  html{
+    font-size: 10px;
+  }
+}
+:root {
+  --primary-color: ;
+  --color-light:#FFFFFF;
+  --secondary-color: ;
+  --dark-color:#010416;
+  --tertiary-color: #FE8B1F;
+  --sky-color: ;
+  --grey-color: #6C86AC;;
+  --blue-gradient:linear-gradient(90deg, #14C5FB 0%, #095BE9 100%);
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
