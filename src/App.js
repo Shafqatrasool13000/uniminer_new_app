@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
+import 'swiper/css';
 import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/Themes";
