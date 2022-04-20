@@ -4,6 +4,6 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: 'Manrope', sans-serif;
-    transition: all 0.50s linear;
+    
   }
   `

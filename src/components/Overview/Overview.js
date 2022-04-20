@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { OverviewMainContainer } from './StyledOverview';
 import lightMode from '../../assets/lightMode.svg';
-import { Card, Col, Row } from 'react-bootstrap';
+import darkMode from '../../assets/darkMode.svg';
+import { Card, Col, ProgressBar, Row } from 'react-bootstrap';
 import btc from '../../assets/btc.svg';
 import { CgChevronDown } from "react-icons/cg";
 import trend1 from '../../assets/trend1.png';
@@ -9,33 +10,37 @@ import trend2 from '../../assets/trend2.png';
 import trend3 from '../../assets/trend3.png';
 import trend4 from '../../assets/trend4.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { ToggleModeContext } from '../../App';
 const Overview = () => {
     const courseCoins = [1, 2, 3, 4, 5];
+    const { themeToggler, theme } = useContext(ToggleModeContext);
     const hashPower = [{ title: 'Hash rate', sub_title: 'mh/s' }, { title: 'Power', sub_title: 'W' }, { title: 'Daily cost', sub_title: '$ __' },];
 
     const cards = [{
-       img:trend1,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+        img: trend1, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
     }, {
-        img:trend2,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-     },{
-        img:trend3,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-     },{
-        img:trend4,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-     },{
-        img:trend1,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-     }, {
-         img:trend2,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-      },{
-         img:trend3,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-      },{
-         img:trend4,title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
-      }]
+        img: trend2, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend3, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend4, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend1, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend2, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend3, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }, {
+        img: trend4, title: 'Mining news', sub_title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', data: '01.01.2022', views: '129 views'
+    }]
     return (
         <OverviewMainContainer>
             <div className="first-section d-flex justify-content-between ">
                 <h3 className='heading'>Overview</h3>
                 <span>
-                    <img src={lightMode} alt="lightMode" />
+                    {
+                        theme === 'light' ? (<img src={darkMode} onClick={themeToggler} alt="darkMode" />) : (<img src={lightMode} onClick={themeToggler} alt="lightMode" />)
+                    }
                 </span>
             </div>
             <div className="course-coin">
@@ -73,8 +78,8 @@ const Overview = () => {
             <div className="daily-revenue">
                 <p className="title">Daily revenue</p>
                 <div className="revenue-main-container">
-                    <Row className='inner-section'>
-                        <Col className='col-lg p-0'>
+                    <Row className='inner-section p-0'>
+                        <Col className='col-lg p-0 '>
                             <div className="revenue-box d-flex align-items-center">
 
                                 <p className="sub-head">
@@ -85,12 +90,13 @@ const Overview = () => {
                                 </span>
                                 <CgChevronDown className='ms-2' color='#14C5FB' />
                             </div>
+
                         </Col>
                         {
                             hashPower.map(((data, index) => (
-                                <Col key={index} className='col-lg p-0 mx-1'>
+                                <Col key={index} className='col-lg p-0 '>
 
-                                    <div className={`${index !== 2 ? 'revenue-box d-flex align-items-center' : 'revenue-box d-flex align-items-center head '}`}>
+                                    <div className={`${index !== 2 ? 'revenue-box d-flex align-items-center' : 'revenue-box2 d-flex align-items-center head '}`}>
 
                                         <p className="sub-head">
                                             {data?.title}
@@ -134,7 +140,7 @@ const Overview = () => {
                             },
                             1024: {
                                 width: 1024,
-                                slidesPerView: 3,
+                                slidesPerView: 4,
                             },
 
                         }}
@@ -145,8 +151,8 @@ const Overview = () => {
                         onSwiper={(swiper) => console.log(swiper)}
                     >
                         {
-                            cards.map(({img, title, subtitle, data, views }, index) => (
-                                <SwiperSlide><Card >
+                            cards.map(({ img, title, subtitle, data, views }, index) => (
+                                <SwiperSlide key={index}><Card >
                                     <Card.Img variant="top" src={img} />
                                     <Card.Body>
                                         <div className="card-date d-flex justify-content-between">
@@ -166,6 +172,7 @@ const Overview = () => {
                     </Swiper>
 
                 </div>
+                <ProgressBar now={30} />
             </div>
         </OverviewMainContainer>
     )

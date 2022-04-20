@@ -12,10 +12,10 @@ margin-left:16px;
 }
 }
 .ant-layout{
-background:${({ theme }) => theme.background};;
+background:rgba(0, 0, 0, 0.3);
 .ant-layout-content{
   @media screen and (max-width:480px) {
-    margin: 24px 13px;
+    margin: 24px 8px;
     padding: 0;
   }
   margin:24 16px;
@@ -123,5 +123,15 @@ border-radius: 10px;
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{
 background: #070D1B;
+position:relative;
+}
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected::before{
+  content:'';
+  width: 8px;
+   height: 40px;
+  background: #FE8B1F;
+border-radius: 10px 0px 0px 10px;
+position:absolute;
+left:0;
 }
 `

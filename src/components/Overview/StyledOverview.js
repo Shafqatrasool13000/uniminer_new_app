@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const OverviewMainContainer=styled.div`
 font-family: Manrope;
-padding:0 10px;
+padding:16px 10px ;
 .first-section{
 .heading{
 font-size: 28px;
 font-weight:600;
 line-height:38px;
 letter-spacing:0em;
-color: #FFFFFF;
+color: ${({theme})=>theme.text};
 }
 }
 
@@ -138,7 +138,7 @@ font-weight: 700 ;
 line-height: 22px;
 letter-spacing: 0em;
 margin: 0;
-color:#FE8B1F;
+color:#FE8B1F ;
 }
 .sub-head{
 font-size: 14px;
@@ -146,6 +146,7 @@ font-weight: 400;
 line-height: 19px;
 letter-spacing: 0em;
 margin: 0;
+color:${({theme})=>theme.text}
 
 }
 .underline{
@@ -154,13 +155,36 @@ color: #6C86AC;
 
 
 .revenue-box{
-background: ${({ theme }) => theme.cardBackground};;
+background: ${({ theme }) => theme.productCardBackground};;
 padding: 16px 40px;
-border-radius: 10px;
 margin-bottom: 12px;
 margin-bottom:10px;
+position:relative;
 
-}    
+}
+.revenue-box::after{
+  content:"";
+  background:rgba(255, 255, 255, 0.1);
+  width:1px;
+  height: 49px;
+  position: absolute;
+  right: 0;
+}
+.revenue-box2{
+background: ${({ theme }) => theme.productCardBackground};;
+padding: 16px 40px;
+margin-bottom: 12px;
+margin-bottom:10px;
+.sub-head{
+color:#FE8B1F;
+}
+.underline{
+  color:#FE8B1F;
+
+}
+}
+
+   
 }
 .trending-cards{
 font-family: Manrope;
@@ -179,7 +203,7 @@ background: ${({ theme }) => theme.contentInnerBackground};;
 border-radius: 20px;
 font-family: Manrope;
 .card-body{
-    padding:8px;
+padding:8px;
 }
 .card-heading{
 font-size: 18px;
@@ -199,8 +223,15 @@ letter-spacing: 0em;
 margin:0;
 margin-top:4px;
 color:${({ theme }) => theme.text};
-
 }
+}
+.progress{
+  height:2px;
+  background-color:rgba(233, 233, 233, 0.2);
+  margin-top:32px;
+  .progress-bar{
+    background-color:#FE8B1F;
+  }
 }
 }
 `

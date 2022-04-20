@@ -14,6 +14,9 @@ import machine from '../../assets/machine.svg';
 import stake from '../../assets/stake.svg';
 import { UniminerDashboardMain } from './StyledUniminerDashboard';
 import Overview from '../Overview/Overview';
+import Hosting from '../Hosting/Hosting';
+import HostingDetail from '../Hosting/HostingDetail';
+import Machines from '../../Machines/Machines';
 
 const { Header, Sider, Content } = Layout;
 const UniminerDashborad = () => {
@@ -84,7 +87,7 @@ const UniminerDashborad = () => {
                         className="site-layout-background "
                        
                     >
-                        <Overview/>
+                        <Machines/>
                     </Content>
                 </Layout>
             </Layout>
