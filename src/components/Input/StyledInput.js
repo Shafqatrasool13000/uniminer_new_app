@@ -12,7 +12,7 @@ line-height: 19px;
 letter-spacing: 0em;
 height:45px;
 outline:none;
-color:var(--grey-color);
+color:${({theme})=>theme.text3};
 }
 
 `

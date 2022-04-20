@@ -79,7 +79,7 @@ margin: 0;
 }
 
 .coin-box{
-background: ${({ theme }) => theme.cardBackground};;
+background: ${({ theme }) => theme.cardBackground};
 padding: 16px 7px;
 border-radius: 10px;
 margin-bottom: 12px;

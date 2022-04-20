@@ -16,7 +16,10 @@ import { UniminerDashboardMain } from './StyledUniminerDashboard';
 import Overview from '../Overview/Overview';
 import Hosting from '../Hosting/Hosting';
 import HostingDetail from '../Hosting/HostingDetail';
-import Machines from '../../Machines/Machines';
+import Machines from '../Machines/Machines';
+import Profile from '../Profile/Profile';
+import Settings from '../Settings/Settings';
+import Stake from '../Stake/Stake';
 
 const { Header, Sider, Content } = Layout;
 const UniminerDashborad = () => {
@@ -87,7 +90,7 @@ const UniminerDashborad = () => {
                         className="site-layout-background "
                        
                     >
-                        <Machines/>
+                        <Stake/>
                     </Content>
                 </Layout>
             </Layout>

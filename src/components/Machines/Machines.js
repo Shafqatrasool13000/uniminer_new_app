@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap'
 import { MachinesMainContainer } from './StyledMachines';
-import hotImg from '../assets/hot.svg';
-import machineImg from '../assets/machineImg.png';
-import HeadSection from '../components/HeadSection/HeadSection';
+import hotImg from '../../assets/hot.svg';
+import machineImg from '../../assets/machineImg.png';
+import HeadSection from '../HeadSection/HeadSection';
 
 
 const Machines = () => {
@@ -25,10 +25,10 @@ const Machines = () => {
                                     <Card.Body>
                                         <div className="first-section">
                                             <Card.Title className='d-flex align-items-center justify-content-center'>
-                                                Antiminer S17 Plan
+                                                Antiminer
                                                 <span><img src={hotImg} alt="hot img" /></span>
                                             </Card.Title>
-                                            <p className="miner-info">$6960.00</p>
+                                            <p className="price-info">$6960.00</p>
                                             <img className='machine-img' src={machineImg} alt="antiminer" />
                                             <button className="buy-now-btn">
                                                 Buy Now
@@ -41,8 +41,8 @@ const Machines = () => {
                                                 {
                                                     [1, 2, 3].map((title, index) => (
                                                         <div className="d-flex detail-section justify-content-center">
-                                                            <p>Hashrate</p>
-                                                            <p className='ms-4'>53TH/s</p>
+                                                            <p className='title'>Hashrate</p>
+                                                            <p className='sub-title ms-4'>53TH/s</p>
                                                         </div>
                                                     ))
                                                 }

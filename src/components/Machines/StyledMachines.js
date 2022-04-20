@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
 export const MachinesMainContainer = styled.div`
-margin-top:-27px;
+margin-top:10px;
 margin-bottom:64px;
-@media screen and (max-width:480px) {
-    margin-top:-100px;  
-}
+
 
 .machine-main{
 padding-top: 33px;
 @media screen and (max-width:480px) {
-    padding-top: 10px;  
+  padding-top: 10px;  
 }
 .card{
 font-family: Manrope;
@@ -19,7 +17,7 @@ border-radius: 10px;
 color: #FFFFFF;
 text-align: center;
 padding-bottom: 16px;
-background: rgba(19, 24, 35, 0.5);
+background:${({theme})=>theme.boxBackground};
 overflow: hidden;
 position:relative;
 
@@ -42,8 +40,9 @@ padding:0;
 .first-section{
 font-family: Manrope;
 border-radius: 10px;
-background: rgba(19, 24, 35, 0.5);
+background: ${({theme})=>theme.productCardBackground2};
 padding:2px 18px 18px 16px;
+color:${({theme})=>theme.text};
 .card-title{
 font-size: 14px;
 font-weight: 600;
@@ -51,11 +50,11 @@ line-height: 19px;
 letter-spacing: 0em;
 margin-left:14px;
 margin-top:24px;
-
 border-bottom: 1px solid rgba(255, 255, 255, 0.205);
+
 }
 
-.miner-info{
+.price-info{
 font-size: 28px;
 font-weight: 600;
 line-height: 38px;
@@ -95,12 +94,24 @@ letter-spacing: 0em;
 color: #6C86AC;
 }
 .details-section{
+  color:${({theme})=>theme.text};
 .detail-section{
+
+margin-top:8px;
+.title{
+opacity:5;
 font-size: 10px;
 font-weight: 400;
 line-height: 14px;
 letter-spacing: 0em;
-margin-top:0.8rem;
+}
+.sub-title{
+font-size: 10px;
+font-weight: 600;
+line-height: 14px;
+letter-spacing: 0em;
+
+}
 }
 }
 }

@@ -11,7 +11,7 @@ import UniminerDashborad from './components/UniminerDashboard/UniminerDashboard'
 
 export const ToggleModeContext = createContext('light');
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
   }
@@ -22,7 +22,7 @@ function App() {
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <>
           <GlobalStyles />
-          <button onClick={themeToggler}>Switch Theme</button>
+          {/* <button onClick={themeToggler}>Switch Theme</button> */}
           {/* <Login/> */}
           {/* <Register/> */}
           <UniminerDashborad />
