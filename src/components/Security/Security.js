@@ -9,12 +9,15 @@ const Security = () => {
     const rules = ['Minimum 8 character', 'At least one special character', 'At least one number', 'Can’t be the same as a previous']
     return (
         <StyledSecurtiyMain>
-            <div className="two-factor-section d-flex justify-content-between align-items-center">
+            <div className="two-factor-section d-block d-sm-flex justify-content-between align-items-center">
                 <div className="text-section">
                     <p className="title">Two-factor authentication</p>
                     <p className="sub-title">To give your account even more protection, use 2-step authorization</p>
                 </div>
+                <div className="mt-3 mt-sm-0">
+                    
                 <ToggleButton />
+                </div>
 
             </div>
             <div className="change-password-section">
