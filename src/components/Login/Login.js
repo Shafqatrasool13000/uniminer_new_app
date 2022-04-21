@@ -5,8 +5,13 @@ import { LoginMainContainer } from './StyledLogin';
 import logo from '../../assets/logo.svg';
 import logotxt from '../../assets/logo-txt.png';
 import Input from '../Input/Input';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate=useNavigate();
+    const moveToDashboard=()=>{
+      navigate('dashboard');
+    }
     return (
         <LoginMainContainer>
             <Container fluid>
@@ -20,35 +25,37 @@ const Login = () => {
                             <div className="text-section">
                                 <p className="heading">Uniminer</p>
                                 <p className="sub-heading">
-                                made crypto mining simple
+                                    made crypto mining simple
                                 </p>
                             </div>
                         </div>
                     </Col>
                     <Col sm={12} md={6} className='right-section-main'>
                         <div className="right-section">
-                         <div className="close-icon">
-                             <CgCloseO size='26px'  className='close-icon'/>
-                         </div>
-                         <div className="login-section">
-                             <label htmlFor="" className="label">Login</label>
-                             <div className="mt-16">
-                             <Input type='email' placeholder='Email'/>
-                             </div>
-                             <div className="mt-16">
-                             <Input type='password' placeholder='Password'/>
-                             </div>
-                             <div className="d-flex     justify-content: stretch">
-                             <button className="login-btn w-100 ">
-                             Login
-                             </button>
-                             </div>
-                             <div className="register-text mt-16">
-                                 <span>Don't have an account?</span>
-                                 <span className='register'> Please register</span>
+                            <div className="close-icon">
+                                <CgCloseO size='26px' className='close-icon' />
+                            </div>
+                            <div className="login-section">
+                                <label htmlFor="" className="label">Login</label>
+                                <div className="mt-16">
+                                    <Input type='email' placeholder='Email' />
+                                </div>
+                                <div className="mt-16">
+                                    <Input type='password' placeholder='Password' />
+                                </div>
+                                <div className="d-flex     justify-content: stretch">
+                                    <button className="login-btn w-100 " onClick={moveToDashboard}>
+                                        Login
+                                    </button>
+                                </div>
+                                <div className="register-text mt-16">
+                                    <span>Don't have an account?</span>
+                                    <Link to='register'>
+                                    <span className='register'> Please register</span>
+                                    </Link>
 
-                             </div>
-                         </div>
+                                </div>
+                            </div>
                         </div>
                     </Col>
                 </Row>

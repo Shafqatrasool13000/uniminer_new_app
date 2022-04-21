@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import BlueButton from '../BlueButton'
 import HeadSection from '../HeadSection/HeadSection'
 import { StyledStackMain } from './StyledStack'
 
@@ -11,47 +12,43 @@ const Stake = () => {
     ]
     return (
         <StyledStackMain>
-            <HeadSection />
+            <HeadSection heading='Stake'/>
             <div className="balance-section">
                 <p className="balance">Available balance</p>
                 <p className="amount">$187,377.23</p>
-                <div className="anaylsis-section">
 
-                    <div className="inner-container">
-                        <Container>
-                            <Row className='inner-section p-0'>
 
-                                {
-                                    analysis.map((({ title, amount }, index) => (
-                                        <Col key={index} className='col-lg p-0 '>
-
-                                            <div className={`${index !== 2 ? 'revenue-box d-flex align-items-center' : 'revenue-box2 d-flex align-items-center head '}`}>
-
-                                                <p className="sub-head">
-                                                    {title}
-                                                </p>
-                                                {
-                                                    !(index === 2) &&
-                                                    <p className="underline head ms-2">
-                                                        __
-                                                    </p>
-                                                }
-
-                                                <p className="sub-head ms-2">
-                                                    {amount}
-                                                </p>
-
-                                            </div>
-                                        </Col>
-                                    )))
-                                }
-
-                            </Row>
-                        </Container>
-
+                <div className="analysis-section">
+                    <div className="inner-section">
+                    <Container>
+                        <Row className='p-0 align-items-center'>
+                            {
+                                analysis.map((({ title, amount }, index) => (
+                                    <Col key={index} className='col-lg p-0'>
+                                        <div className='analysis-box  '>
+                                            <p className='title'>
+                                                {title}
+                                            </p>
+                                            <p className={`${index === 0 ? 'sub-title text-yellow ms-2' : 'sub-title'}`}>
+                                                {amount}
+                                            </p>
+                                        </div>
+                                    </Col>
+                                )))
+                            }
+                            <Col className='col-lg p-0'>
+                                <div className='analysis-btn-section  '>
+                                    <BlueButton title={'About Treasury'} />
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                     </div>
+                    
 
                 </div>
+
+
             </div>
         </StyledStackMain>
     )

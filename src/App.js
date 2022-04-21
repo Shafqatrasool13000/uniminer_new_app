@@ -2,10 +2,14 @@ import { useState, createContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import 'swiper/css';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/GlobalStyles";
 import { lightTheme, darkTheme } from "./components/Themes";
-// import Login from './components/Login/Login';
+import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import UniminerDashborad from './components/UniminerDashboard/UniminerDashboard';
 
@@ -17,20 +21,16 @@ function App() {
   }
   console.log(theme, 'theme');
   return (
-  
-    <ToggleModeContext.Provider value={{themeToggler:themeToggler,theme:theme}}>
+    <ToggleModeContext.Provider value={{ themeToggler: themeToggler, theme: theme }}>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <>
-          <GlobalStyles />
-          {/* <button onClick={themeToggler}>Switch Theme</button> */}
-          {/* <Login/> */}
-          {/* <Register/> */}
-          <UniminerDashborad />
-
-        </>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<UniminerDashborad />} />
+        </Routes>
+        <GlobalStyles />
       </ThemeProvider>
     </ToggleModeContext.Provider>
-
   );
 }
 
