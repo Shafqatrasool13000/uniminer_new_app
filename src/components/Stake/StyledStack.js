@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const StyledStackMain = styled.div`
 font-family: Manrope;
+padding:0 16px;
+.graph-section{
+  margin-top:48px;
+}
 .balance-section{
 font-family: Manrope;
 background: ${({ theme }) => theme.cardBackground2};
@@ -25,9 +29,11 @@ letter-spacing: 0em;
 overflow-x:auto;
 background: ${({ theme }) => theme.productCardBackground};
 border-radius: 10px;
+
 .inner-section{
 width:1015px;
 padding: 10px;
+
 .analysis-box{
 
 margin-bottom: 12px;

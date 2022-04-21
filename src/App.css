@@ -1,0 +1,9 @@
+.ant-layout.site-layout {
+    margin-left: 0px !important;
+}
+.ant-layout-sider-below + .ant-layout.site-layout {
+    margin-left: -200px !important;
+}
+.ant-layout-sider-collapsed + .ant-layout.site-layout {
+    margin-left: 0px !important;
+}

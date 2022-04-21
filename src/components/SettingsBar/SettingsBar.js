@@ -13,7 +13,9 @@ const SettingsBar = () => {
         <StyledSettingBarMain>
 
             <div className="settings-main-container">
+                
                 <Tab.Container id="left-tabs-example" defaultActiveKey="User" >
+                    <div className="setting-bar">
                     <Row className='inner-section p-0'>
                         <Nav variant="pills">
                             {
@@ -26,8 +28,8 @@ const SettingsBar = () => {
                                 )))
                             }
                         </Nav>
-
                     </Row>
+                     </div>
                     <Tab.Content>
                         <Tab.Pane eventKey="User">
                             <Profile />

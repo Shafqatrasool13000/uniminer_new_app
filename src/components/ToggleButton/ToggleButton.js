@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyledToggleButtons } from './StyledToggleButton'
 
 const ToggleButton = () => {
+ 
   return (
     <StyledToggleButtons>
-      <div className="toggle-buttons d-flex">
-        <button className="enable sub-title">Enable</button>
-        <button className="disable">Disable</button>
-      </div>
+        <div class="switch-button">
+    <input class="switch-button-checkbox" type="checkbox"></input>
+    <label class="switch-button-label" for=""><span class="switch-button-label-span">Disable</span></label>
+  </div>
+
     </StyledToggleButtons>
   )
 }

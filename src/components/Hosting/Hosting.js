@@ -6,10 +6,14 @@ import canadaFlag from '../../assets/canadaFlag.svg';
 import hostingProduct from '../../assets/hostingProduct.png';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ToggleModeContext } from '../../App';
+import { useNavigate} from 'react-router-dom';
+   
 
 
 const Hosting = () => {
     const {themeToggler,theme}=useContext(ToggleModeContext);
+    const navigate = useNavigate();
+   
 
     const productDetails=[
         {
@@ -31,7 +35,9 @@ const Hosting = () => {
             title:'Hosting fee',sub_title:'$130 per month'
         },
     ];
-
+   const moveToDetails=()=>{
+    navigate('/hosting-details');
+   }
     const products=[1,2,3];
     return (
         <HostingMainContainer>
@@ -87,7 +93,7 @@ const Hosting = () => {
                                     </div>
                                 </div>
                                 <div className="check-detail-btn">
-                        <button className="detail-btn">
+                        <button onClick={moveToDetails} className="detail-btn">
                             Check details
                         </button>
                     </div>

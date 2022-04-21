@@ -146,8 +146,8 @@ const Overview = () => {
                         }}
                         spaceBetween={10}
                         slidesPerView={5}
-                        centeredSlides={true}
-                        onSlideChange={() => console.log('slide change')}
+                        // centeredSlides={true}
+                        // onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                     >
                         {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const UniminerDashboardMain=styled.div`
+export const UniminerDashboardMain = styled.div`
 
 .logo-section{
 .logo-img{
@@ -11,21 +11,21 @@ width:61px;
 margin-left:16px;
 }
 }
+
 .ant-layout{
 background:rgba(0, 0, 0, 0.3);
 .ant-layout-content{
   @media screen and (max-width:480px) {
-    margin: 24px 8px;
-    padding: 0;
+  margin: 24px 8px;
+  padding: 0;
   }
   margin:24 16px;
   padding: 24;
   min-height: 280;
   margin-top:-55px;
   margin-left:20px;
- 
-  
 }
+
 .ant-layout-header{
 background:transparent;
 .anticon svg {
@@ -62,15 +62,47 @@ letter-spacing: 0em;
 color: #FFFFFF;
 }
 .profile-section{
-padding:0 16px;
 .profile-inner{
 margin-top:16px;
-
 background: rgba(19, 24, 35, 0.5);
 border-radius: 10px;
-padding:32px 0;
+padding:20px 0;
 .inner-div{
-padding-right:38px;
+
+.setting-main{
+width:100%;
+.settings{
+  cursor:pointer;
+  position:relative;
+  margin-left: 30px;
+padding: 8px;
+}
+.settings-bg{
+
+background: #070D1B;
+
+}
+.hightlight-settings{
+margin-left: 30px;
+padding: 8px;
+}
+.hightlight-settings::before{
+content:'';
+cursor:pointer;
+width: 8px;
+height: 37px;
+background: #FE8B1F;
+border-radius: 10px 0px 0px 10px;
+position:absolute;
+left: -4%;
+top: 5%;
+
+}
+}
+.profile-div{
+  padding-right: 15px;
+}
+
 }
 .profile-img{
 margin-top:33px;

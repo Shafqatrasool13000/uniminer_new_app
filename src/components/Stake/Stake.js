@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import BlueButton from '../BlueButton'
+import BlueButton from '../BlueButton/BlueButton'
 import HeadSection from '../HeadSection/HeadSection'
-import { StyledStackMain } from './StyledStack'
+import { StyledStackMain } from './StyledStack';
+import stakeGraphLight from '../../assets/stakeGraphLight.png';
+import { ToggleModeContext } from '../../App';
+import stakeGraphDark from '../../assets/stakeGraphDark.png';
 
 const Stake = () => {
+    const {themeToggler,theme}=useContext(ToggleModeContext);
     const analysis = [
         { title: 'Interest Rate', amount: '4.5%' },
         { title: 'Today interest earned', amount: '$52.34' },
@@ -42,7 +46,8 @@ const Stake = () => {
                                 </div>
                             </Col>
                         </Row>
-                    </Container>
+                    
+                        </Container>
                     </div>
                     
 
@@ -50,6 +55,12 @@ const Stake = () => {
 
 
             </div>
+            <div className="graph-section">
+                        {
+                            theme==='light'?( <img src={stakeGraphLight} className='w-100' alt="graph" />):( <img className='w-100' src={stakeGraphDark} alt="graph" />)
+                        }
+                       
+                    </div>
         </StyledStackMain>
     )
 }

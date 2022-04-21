@@ -3,8 +3,27 @@ import styled from 'styled-components';
 export const StyledSettingBarMain=styled.div`
 
 .settings-main-container{
-overflow-x:auto;
+
 border-radius: 25px;
+
+
+.nav-item{
+  text-align: center;
+}
+.nav-pills .nav-link {
+color:${({theme})=>theme.text};
+transition: none;
+
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+border-radius:25px;
+color:white;
+text-align:center;
+}
+.setting-bar{
+  overflow-x:auto;
+  padding-bottom: 8px;
+}
 /* width */
 ::-webkit-scrollbar {
   height: 8px;
@@ -26,23 +45,12 @@ border-radius: 25px;
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
-
-.nav-pills .nav-link {
-color:${({theme})=>theme.text};
-
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    border-radius:25px;
-    color:white;
-    text-align:center;
-}
 .inner-section{
 width:1000px;
 margin:0 auto;
 background: ${({theme})=>theme.navBackground};
 border-radius: 25px;
 border:1px solid ${({theme})=>theme.toggleBorder2};
-
 }
 }
 
@@ -53,10 +61,7 @@ line-height: 19px;
 letter-spacing: 0em;
 margin: 0;
 color:${({theme})=>theme.text}
-
 }
-
-
 
 .revenue-box{
 background: ${({ theme }) => theme.productCardBackground};;
@@ -65,12 +70,6 @@ margin-bottom: 12px;
 margin-bottom:10px;
 position:relative;
 font-family: Manrope;
-
-
 }
-
-
-
-   
 
 `
