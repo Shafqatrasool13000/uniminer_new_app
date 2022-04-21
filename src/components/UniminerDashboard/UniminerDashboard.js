@@ -13,13 +13,6 @@ import hosting from '../../assets/hosting.svg';
 import machine from '../../assets/machine.svg';
 import stake from '../../assets/stake.svg';
 import { UniminerDashboardMain } from './StyledUniminerDashboard';
-import Overview from '../Overview/Overview';
-import Hosting from '../Hosting/Hosting';
-import HostingDetail from '../Hosting/HostingDetail';
-import Machines from '../Machines/Machines';
-import Profile from '../Profile/Profile';
-import Settings from '../Settings/Settings';
-import Stake from '../Stake/Stake';
 import { useNavigate,useLocation } from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;

@@ -8,7 +8,7 @@ import { ToggleModeContext } from '../../App';
 import stakeGraphDark from '../../assets/stakeGraphDark.png';
 
 const Stake = () => {
-    const {themeToggler,theme}=useContext(ToggleModeContext);
+    const {theme}=useContext(ToggleModeContext);
     const analysis = [
         { title: 'Interest Rate', amount: '4.5%' },
         { title: 'Today interest earned', amount: '$52.34' },
