@@ -29,6 +29,9 @@ font-family: Manrope;
 .change-password-section{
 font-family: Manrope;
 margin-top:64px;
+.save-btn-section{
+    margin-top:64px;
+}
 .change-password-text{
 font-size: 18px;
 font-weight: 600;
