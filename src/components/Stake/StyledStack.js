@@ -31,7 +31,7 @@ background: ${({ theme }) => theme.productCardBackground};
 border-radius: 10px;
 
 .inner-section{
-width:1015px;
+width:900px;
 padding: 10px;
 
 .analysis-box{
@@ -88,7 +88,7 @@ margin-top:8px;
   background: #b30000; 
 }
 .inner-section{
-width:1015px;
+width:900px;
 margin:0 auto;
 
 }

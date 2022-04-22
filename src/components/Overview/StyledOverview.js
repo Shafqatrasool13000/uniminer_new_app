@@ -52,7 +52,7 @@ overflow-x:auto;
   background: #b30000; 
 }
 .inner-section{
-width:1015px;
+width:1000px;
 margin:0 auto;
 }
 }
@@ -131,7 +131,7 @@ overflow-x:auto;
   background: #b30000; 
 }
 .inner-section{
-width:1015px;
+width:900px;
 margin:0 auto;
 }
 }
