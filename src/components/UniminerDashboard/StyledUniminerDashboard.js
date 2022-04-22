@@ -3,13 +3,24 @@ import styled from 'styled-components';
 export const UniminerDashboardMain = styled.div`
 
 .logo-section{
+  margin-top:25px;
 .logo-img{
 border-radius: 50%;
 width:61px;
 }
 .logo-text-img{
 margin-left:16px;
+
 }
+}
+.ant-layout-sider{
+  margin-left:20px;
+  border-radius: 10px;
+
+}
+.ant-layout-sider-children{
+  margin-top:10px;
+  padding-bottom:10px;
 }
 
 .ant-layout{
@@ -20,7 +31,7 @@ background:rgba(0, 0, 0, 0.3);
   margin-top:-55px;
   margin-left:20px;
   @media screen and (max-width:480px) {
-  margin: 24px 8px;
+  margin: 0px 8px;
   padding: 0;
   margin-right:8px;
   }
@@ -132,24 +143,22 @@ padding:0 10px;
 }
 }
 }
-
-#components-layout-demo-custom-trigger .trigger {
-padding: 0 24px;
-font-size: 18px;
-line-height: 64px;
-cursor: pointer;
-transition: color 0.3s;
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-#components-layout-demo-custom-trigger .trigger:hover {
-color: #1890ff;
+.site-layout-sub-header-background {
+  background: #fff;
 }
 
-#components-layout-demo-custom-trigger .logo {
-height: 32px;
-margin: 16px;
-background: rgba(255, 255, 255, 0.3);
-z-index:10;
+.site-layout-background {
+  background: #fff;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
 }
 
 .site-layout .site-layout-background {

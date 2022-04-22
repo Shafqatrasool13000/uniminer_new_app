@@ -19,7 +19,6 @@ import Stake from './components/Stake/Stake';
 import Settings from './components/Settings/Settings';
 import HostingDetail from './components/Hosting/HostingDetail';
 import './App.css';
-
 export const ToggleModeContext = createContext('light');
 function App() {
   const [theme, setTheme] = useState('dark');

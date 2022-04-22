@@ -2,9 +2,6 @@ import styled from 'styled-components';
 
 export const StyledToggleButtons=styled.div`
 
-
-
-
 .switch-button {
   background: transparent;
   border:1px solid #14C5FB;
