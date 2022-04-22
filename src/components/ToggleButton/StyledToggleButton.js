@@ -48,7 +48,7 @@ color:${({theme})=>theme.text};
     z-index: 2;
 
     &:checked + .switch-button-label:before {
-      transform: translateX(120px);
+      transform: translateX(100px);
       transition: transform 300ms linear;
     }
 
