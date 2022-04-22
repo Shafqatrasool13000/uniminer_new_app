@@ -5,7 +5,7 @@ const ToggleButton = () => {
  
   return (
     <StyledToggleButtons>
-        <div class="switch-button">
+        <div class="switch-button text">
     <input class="switch-button-checkbox" type="checkbox"></input>
     <label class="switch-button-label" for=""><span class="switch-button-label-span">Disable</span></label>
   </div>
