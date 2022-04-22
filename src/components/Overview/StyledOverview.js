@@ -52,7 +52,7 @@ overflow-x:auto;
   background: #b30000; 
 }
 .inner-section{
-width:1000px;
+width:950px;
 margin:0 auto;
 }
 }
@@ -109,6 +109,15 @@ background:  ${({theme})=>theme.cardBackground2};
 margin-top:32px;
 .revenue-main-container{
 overflow-x:auto;
+ .left-bottom{
+   border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
+   
+ }
+ .right-bottom{
+  border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+ }
 /* width */
 ::-webkit-scrollbar {
   height: 8px;
@@ -131,7 +140,7 @@ overflow-x:auto;
   background: #b30000; 
 }
 .inner-section{
-width:900px;
+width:930px;
 margin:0 auto;
 }
 }

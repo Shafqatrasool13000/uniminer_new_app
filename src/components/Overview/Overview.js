@@ -12,7 +12,7 @@ import trend4 from '../../assets/trend4.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ToggleModeContext } from '../../App';
 const Overview = () => {
-    const courseCoins = [1, 2, 3, 4, 5];
+    const courseCoins = [1, 2, 3, 4];
     const { themeToggler, theme } = useContext(ToggleModeContext);
     const hashPower = [{ title: 'Hash rate', sub_title: 'mh/s' }, { title: 'Power', sub_title: 'W' }, { title: 'Daily cost', sub_title: '$ __' },];
 
@@ -80,7 +80,7 @@ const Overview = () => {
                 <div className="revenue-main-container">
                     <Row className='inner-section p-0'>
                         <Col className='col-lg p-0 '>
-                            <div className="revenue-box d-flex align-items-center">
+                            <div className="revenue-box left-bottom d-flex align-items-center">
 
                                 <p className="sub-head">
                                     BTC/BCH
@@ -96,7 +96,7 @@ const Overview = () => {
                             hashPower.map(((data, index) => (
                                 <Col key={index} className='col-lg p-0 '>
 
-                                    <div className={`${index !== 2 ? 'revenue-box d-flex align-items-center' : 'revenue-box2 d-flex align-items-center head '}`}>
+                                    <div className={`${index !== 2 ? 'revenue-box d-flex align-items-center' : 'revenue-box2 d-flex align-items-center head right-bottom'}`}>
 
                                         <p className="sub-head">
                                             {data?.title}
