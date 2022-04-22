@@ -2,7 +2,14 @@ import styled from 'styled-components';
 
 export const OverviewMainContainer=styled.div`
 font-family: Manrope;
-padding:16px 10px ;
+padding:16px 10px;
+background:${({theme})=>theme.contentInnerBackground};
+border-radius: 10px;
+@media screen and (max-width:480px) {
+border-radius: 10px;
+padding:10px;
+  
+}
 .first-section{
 .heading{
 font-size: 28px;
@@ -17,6 +24,7 @@ color: ${({theme})=>theme.text};
 font-family: Manrope;
 color: #FFFFFF;
 overflow:hidden;
+background:  ${({theme})=>theme.cardBackground2};
 border-radius: 10px;
 padding:10px;
 .coin-main-container{
@@ -46,7 +54,7 @@ overflow-x:auto;
 .inner-section{
 width:1015px;
 margin:0 auto;
-    }
+}
 }
 .title{
 font-size: 22px;
@@ -97,6 +105,8 @@ color: #FFFFFF;
 overflow:hidden;
 border-radius: 10px;
 padding:10px;
+background:  ${({theme})=>theme.cardBackground2};
+margin-top:32px;
 .revenue-main-container{
 overflow-x:auto;
 /* width */
@@ -123,7 +133,7 @@ overflow-x:auto;
 .inner-section{
 width:1015px;
 margin:0 auto;
-    }
+}
 }
 .title{
 font-size: 22px;
@@ -173,8 +183,7 @@ position:relative;
 .revenue-box2{
 background: ${({ theme }) => theme.productCardBackground};;
 padding: 16px 40px;
-margin-bottom: 12px;
-margin-bottom:10px;
+padding-bottom: 19px;
 .sub-head{
 color:#FE8B1F;
 }
@@ -191,6 +200,14 @@ font-family: Manrope;
 color: #FFFFFF;
 overflow:hidden;
 border-radius:10px;
+background:  ${({theme})=>theme.cardBackground2};
+border-radius: 10px;
+padding:16px;
+margin-top:32px;
+@media screen and (max-width:480px) {
+padding:10px;
+  
+}
 .title{
 font-size: 22px;
 font-weight: 600;

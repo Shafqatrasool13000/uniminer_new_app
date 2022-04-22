@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HostingDetailMainContainer=styled.div`
 font-family: Manrope;
 padding:16px 10px ;
-
+background: ${({theme})=>theme.cardBackground2};
 .first-section{
 .heading{
 font-size: 28px;
@@ -26,12 +26,12 @@ margin-top:16px;
 padding-bottom: 16px;
 .product{
 font-family: Manrope;
-background:${({theme})=>theme.productBackground2};
-border:1px solid rgba(0, 0, 0, 0.3);
+background:${({theme})=>theme.boxBackground};
+border:1px solid ${({theme})=>theme.toggleBorder3};
 margin-top:16px;
-border-radius:0 0 10px 10px;
+border-radius:10px;
 .product-top{
-background: ${({theme})=>theme.productBackground};
+background: ${({theme})=>theme.productCardBackground2};
 border-radius:0 0 10px 10px;
 padding:16px 18px;
 .name{

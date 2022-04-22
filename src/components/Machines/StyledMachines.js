@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const MachinesMainContainer = styled.div`
 margin-top:10px;
-margin-bottom:64px;
+padding-bottom:16px;
+background: ${({theme})=>theme.cardBackground2};
+border-radius: 10px;
 
 
 .machine-main{

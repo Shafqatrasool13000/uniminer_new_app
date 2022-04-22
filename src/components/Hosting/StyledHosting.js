@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const HostingMainContainer=styled.div`
 font-family: Manrope;
-padding:16px 10px ;
+padding:16px;
+background: ${({theme})=>theme.cardBackground2};
+border-radius: 10px;
 .first-section{
+    @media screen and (max-width:480px) {
+        padding:10px;
+    }
 .heading{
 font-size: 28px;
 font-weight:600;
@@ -15,10 +20,11 @@ margin:0;
 }
 
 .hosting-product{
-background: ${({theme})=>theme.productBackground};
+background:${({theme})=>theme.productCardBackground2};
 padding:16px;
 padding-right:0;   
 margin-top:32px;
+border-radius: 10px;
 
 .detail-section{
 color: ${({theme})=>theme.text};;

@@ -30,8 +30,6 @@ const HostingDetail = () => {
     ];
     return (
         <HostingDetailMainContainer>
-
-
             <div className="first-section d-flex justify-content-between ">
                 <h3 className='heading'>Details</h3>
                 <span>
@@ -51,7 +49,7 @@ const HostingDetail = () => {
                                             KD5
                                         </p>
 
-                                        <div className="product-img">
+                                        <div className="d-flex justify-content-center product-img">
                                             <img src={detailProduct} alt="detail-pic" />
                                         </div>
                                     </div>

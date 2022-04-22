@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LoginMainContainer=styled.div`
+export const LoginMainContainer = styled.div`
 height:94vh;
 position:relative;
 
@@ -44,6 +44,8 @@ letter-spacing: 0em;
 /* Login Section */
 .right-section-main{
 padding-left: 150px;
+padding-right:30px;
+
 .right-section{
 background:${({ theme }) => theme.background};
 border-radius: 10px;
@@ -114,9 +116,12 @@ margin-left: 30px;
 }
 .right-section-main{
  padding-left:0;
+ padding-right:0;
+
 .right-section{
 height: 84vh;
 padding-left: 35px;
+
 .login-section{
 padding-left:0;
  width:80% !important;

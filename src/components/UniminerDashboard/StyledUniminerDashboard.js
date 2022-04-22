@@ -15,15 +15,18 @@ margin-left:16px;
 .ant-layout{
 background:rgba(0, 0, 0, 0.3);
 .ant-layout-content{
-  @media screen and (max-width:480px) {
-  margin: 24px 8px;
-  padding: 0;
-  }
-  margin:24 16px;
-  padding: 24;
+  margin-right:30px;
   min-height: 280;
   margin-top:-55px;
   margin-left:20px;
+  @media screen and (max-width:480px) {
+  margin: 24px 8px;
+  padding: 0;
+  margin-right:8px;
+  }
+ 
+ 
+  
 }
 
 .ant-layout-header{
